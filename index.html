@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ôn Luyện Trắc Nghiệm: Kiến Trúc Máy Tính & Hệ Điều Hành</title>
+  <meta name="description" content="Hệ thống trắc nghiệm trực quan 150 câu hỏi Kiến trúc máy tính và Nguyên lý Hệ điều hành chuẩn đề cương, 3 bài thi 50 câu, xáo đáp án tự động & Leitner Spaced Repetition.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <div class="brand">
+        <div class="brand-icon">AG</div>
+        <div class="brand-text">
+          <h1>KTMT & HỆ ĐIỀU HÀNH</h1>
+          <p>Ngân hàng 150 câu trắc nghiệm chuẩn đề cương • 3 bài thi • Xáo đáp án</p>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <nav class="nav-tabs">
+        <button class="nav-tab active" data-target="view-practice">
+          <span>🚀</span> Ôn Tập Tức Thì
+        </button>
+        <button class="nav-tab" data-target="view-exam">
+          <span>⏱️</span> Thi Thử (3 Đề)
+        </button>
+        <button class="nav-tab" data-target="view-cheatsheet">
+          <span>📖</span> Cẩm Nang Công Thức
+        </button>
+        <button class="nav-tab" data-target="view-stats">
+          <span>📊</span> Tiến Độ & Sổ Tay Sai
+        </button>
+      </nav>
+
+      <!-- Quick Settings -->
+      <div class="header-controls">
+        <button id="btn-font-dec" class="btn-icon" title="Giảm cỡ chữ">A-</button>
+        <button id="btn-font-inc" class="btn-icon" title="Tăng cỡ chữ">A+</button>
+        <button id="btn-theme-toggle" class="btn-icon" title="Chuyển chế độ Sáng / Tối">🌙</button>
+        <button id="btn-reset-data" class="btn-icon" title="Xóa toàn bộ dữ liệu">🗑️</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="main-wrapper">
+
+    <!-- VIEW 1: ÔN TẬP TỨC THÌ -->
+    <section id="view-practice" class="view-section active">
+      
+      <!-- Targeted Drill Banner (Appears when drilling exam mistakes or specific set) -->
+      <div id="targeted-drill-banner" class="targeted-drill-banner" style="display: none;">
+        <div class="drill-info">
+          <span class="drill-icon">🎯</span>
+          <div>
+            <strong id="targeted-drill-title">Đang luyện tập chuyên sâu các câu làm sai</strong>
+            <div style="font-size: 0.8rem; opacity: 0.9;">Chế độ củng cố lỗ hổng kiến thức • Phản hồi và hướng dẫn giải tức thì</div>
+          </div>
+        </div>
+        <button id="btn-exit-targeted-drill" class="btn btn-sm btn-light">Thoát chế độ này ✕</button>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <div class="filter-group">
+          <select id="practice-chapter-select" class="custom-select">
+            <option value="all">📂 Tất cả 6 Chuyên đề (150 câu)</option>
+            <option value="1">Chuyên đề 1: Tổng quan Kiến trúc & Hiệu năng (1-15)</option>
+            <option value="2">Chuyên đề 2: Hệ đếm, Biểu diễn dữ liệu & Byte (16-42)</option>
+            <option value="3">Chuyên đề 3: CPU, Pipeline, Chế độ địa chỉ & Ngắt (43-69)</option>
+            <option value="4">Chuyên đề 4: Phân cấp bộ nhớ, Cache & Vào/Ra (70-96)</option>
+            <option value="5">Chuyên đề 5: Hệ điều hành, Tiến trình & Lập lịch (97-123)</option>
+            <option value="6">Chuyên đề 6: Quản lý bộ nhớ, Ảo hóa, Tệp & Đĩa (124-150)</option>
+          </select>
+
+          <div class="filter-pills">
+            <button class="filter-pill practice-filter-pill active" data-tag="all">Tất cả</button>
+            <button class="filter-pill practice-filter-pill calc" data-tag="calc">⚡ Bài toán tính toán</button>
+            <button class="filter-pill practice-filter-pill bookmark" data-tag="bookmark">⭐ Đã đánh dấu</button>
+            <button class="filter-pill practice-filter-pill wrong" data-tag="wrong">❌ Câu làm sai</button>
+            <button class="filter-pill practice-filter-pill box1" data-tag="box1">🔴 Hộp 1: Cần ôn</button>
+            <button class="filter-pill practice-filter-pill box2" data-tag="box2">🟡 Hộp 2: Đang rèn</button>
+            <button class="filter-pill practice-filter-pill box3" data-tag="box3">🟢 Hộp 3: Thành thạo</button>
+          </div>
+        </div>
+
+        <div class="filter-group" style="display: flex; gap: 8px;">
+          <input type="text" id="practice-search-input" class="search-input" placeholder="🔍 Tìm kiếm (ví dụ: Amdahl, SJF, bù 2, Cache...)">
+          <button id="btn-reshuffle-options" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0 12px; white-space: nowrap;" title="Xáo lại ngẫu nhiên vị trí các đáp án A/B/C/D">
+            🔀 Xáo đáp án
+          </button>
+        </div>
+      </div>
+
+      <!-- Practice Grid -->
+      <div class="practice-grid">
+        
+        <!-- Left: Question Container -->
+        <div id="practice-question-container">
+          <div class="card question-card">
+            <div class="question-meta">
+              <div class="meta-badges">
+                <span id="practice-q-index" class="badge badge-primary">Câu 1 / 150</span>
+                <span id="practice-calc-badge" class="badge badge-accent" style="display: none;">⚡ Bài toán tính toán</span>
+                <span id="practice-leitner-badge" class="badge badge-leitner-1">🔴 Hộp 1: Cần ôn luyện</span>
+                <span id="practice-part-badge" style="font-size: 0.8rem; color: var(--text-muted);">Phần I</span>
+              </div>
+              <button id="btn-practice-bookmark" class="btn-star" title="Đánh dấu câu hỏi này">☆</button>
+            </div>
+
+            <div id="practice-q-text" class="question-title">
+              Nội dung câu hỏi đang tải...
+            </div>
+
+            <!-- Options List (Always shuffled) -->
+            <div id="practice-options-list" class="options-list">
+              <!-- Dynamically rendered -->
+            </div>
+
+            <!-- Explanation Box (Appears after answer) -->
+            <div id="practice-explanation" class="explanation-box">
+              <div class="explanation-header">
+                <span>💡 HƯỚNG DẪN GIẢI CHI TIẾT & CÔNG THỨC</span>
+              </div>
+              <div id="practice-explanation-content" class="explanation-content">
+                <!-- Dynamically rendered -->
+              </div>
+            </div>
+
+            <!-- Action Bar -->
+            <div id="practice-actions" class="action-bar">
+              <button id="btn-prev" class="btn btn-secondary">
+                <span>←</span> Câu trước
+              </button>
+              <div style="font-size: 0.8rem; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
+                <span>Phím tắt: <strong>A, B, C, D</strong> • <strong>← / →</strong></span>
+                <button id="btn-random" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">
+                  🎲 Ngẫu nhiên
+                </button>
+              </div>
+              <button id="btn-next" class="btn btn-primary">
+                Câu tiếp theo <span>→</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Question Palette Sidebar -->
+        <div class="card palette-card">
+          <div class="palette-header">
+            <h3>Bảng Câu Hỏi</h3>
+            <div style="font-size: 0.82rem; color: var(--text-muted);">
+              Đã làm: <strong id="practice-stat-answered" style="color: var(--primary);">0/150</strong> (Đúng: <strong id="practice-stat-correct" style="color: var(--success);">0</strong>)
+            </div>
+          </div>
+
+          <div class="palette-legend">
+            <div class="legend-item"><span class="dot correct"></span> Đúng</div>
+            <div class="legend-item"><span class="dot incorrect"></span> Sai</div>
+            <div class="legend-item"><span class="dot unanswered"></span> Chưa làm</div>
+            <div class="legend-item"><span class="dot flagged"></span> Đánh dấu</div>
+          </div>
+
+          <div id="practice-palette-grid" class="palette-grid">
+            <!-- 150 items dynamically rendered -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- VIEW 2: THI THỬ -->
+    <section id="view-exam" class="view-section">
+      
+      <!-- Screen 1: Exam Setup -->
+      <div id="exam-setup-view" class="exam-intro-card card" style="max-width: 860px;">
+        <div class="exam-intro-icon">📝</div>
+        <h2 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 8px;">Phòng Thi Thử Trực Tuyến</h2>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">
+          Chọn 1 trong 3 bài thi chuẩn (50 câu / 50 phút) hoặc Đề tổng hợp. Tự động xáo trộn câu hỏi & hoán vị 4 đáp án A/B/C/D mỗi lần làm bài.
+        </p>
+
+        <!-- Exam Paper Cards Grid (Phương án A: 150 câu chia đều 3 bài 50 câu) -->
+        <div class="exam-papers-grid">
+          
+          <!-- Card 1 -->
+          <div class="exam-paper-card active" data-paper="paper1">
+            <div class="paper-card-header">
+              <span class="paper-badge blue">ĐỀ SỐ 1</span>
+              <span class="paper-duration">⏱️ 50 phút</span>
+            </div>
+            <h3 class="paper-title">Kiến Trúc Máy Tính Cơ Bản & Biểu Diễn Số Học</h3>
+            <p class="paper-desc">Phạm vi: <strong>Câu 1 – 50</strong> (Tổng quan mô hình Von Neumann, Hiệu năng Amdahl, Hệ đếm, Bù 2, IEEE 754, ALU & Cờ).</p>
+            <div class="paper-footer">
+              <span>📋 50 câu hỏi</span>
+              <span class="paper-tag">Chuẩn kỳ thi</span>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="exam-paper-card" data-paper="paper2">
+            <div class="paper-card-header">
+              <span class="paper-badge green">ĐỀ SỐ 2</span>
+              <span class="paper-duration">⏱️ 50 phút</span>
+            </div>
+            <h3 class="paper-title">CPU Pipeline, Phân Cấp Bộ Nhớ & Cache</h3>
+            <p class="paper-desc">Phạm vi: <strong>Câu 51 – 100</strong> (Đường ống Pipeline, Xung đột Hazard, Bộ nhớ đệm Cache, Ánh xạ tập hợp, Vào/Ra I/O & Ngắt).</p>
+            <div class="paper-footer">
+              <span>📋 50 câu hỏi</span>
+              <span class="paper-tag">Chuẩn kỳ thi</span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="exam-paper-card" data-paper="paper3">
+            <div class="paper-card-header">
+              <span class="paper-badge orange">ĐỀ SỐ 3</span>
+              <span class="paper-duration">⏱️ 50 phút</span>
+            </div>
+            <h3 class="paper-title">Nguyên Lý Hệ Điều Hành, Tiến Trình & Bộ Nhớ Ảo</h3>
+            <p class="paper-desc">Phạm vi: <strong>Câu 101 – 150</strong> (Tiến trình & Luồng, Lập lịch CPU, Deadlock, Phân trang Paging, Thay thế trang & Quản lý đĩa).</p>
+            <div class="paper-footer">
+              <span>📋 50 câu hỏi</span>
+              <span class="paper-tag">Chuẩn kỳ thi</span>
+            </div>
+          </div>
+
+          <!-- Card 4 (Custom / Comprehensive) -->
+          <div class="exam-paper-card" data-paper="custom">
+            <div class="paper-card-header">
+              <span class="paper-badge purple">TÙY CHỈNH</span>
+              <span class="paper-duration">⏱️ Tự do</span>
+            </div>
+            <h3 class="paper-title">Bài Thi Tổng Hợp / Theo Chuyên Đề Tự Chọn</h3>
+            <p class="paper-desc">Tự chọn số lượng câu (20, 40, 50 hoặc 150 câu) từ toàn bộ ngân hàng hoặc lọc theo một chuyên đề cụ thể.</p>
+            <div class="paper-footer">
+              <span>⚙️ Tùy biến</span>
+              <span class="paper-tag">Luyện tự do</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Custom Options Box (Hiển thị khi chọn Card Tùy Chỉnh) -->
+        <div id="exam-custom-options" class="exam-options-grid" style="display: none; margin-top: 20px;">
+          <div class="exam-option-box">
+            <label for="exam-count-select">Số lượng câu hỏi:</label>
+            <select id="exam-count-select" class="custom-select" style="width: 100%;">
+              <option value="20">20 câu (Thời gian: 20 phút)</option>
+              <option value="40">40 câu (Thời gian: 40 phút)</option>
+              <option value="50" selected>50 câu (Thời gian: 50 phút)</option>
+              <option value="150">Toàn bộ 150 câu (Thời gian: 150 phút)</option>
+            </select>
+          </div>
+
+          <div class="exam-option-box">
+            <label for="exam-chapter-select">Phạm vi chuyên đề:</label>
+            <select id="exam-chapter-select" class="custom-select" style="width: 100%;">
+              <option value="all">Toàn bộ 6 chuyên đề (Đề tổng hợp)</option>
+              <option value="1">Chuyên đề 1: Tổng quan & Hiệu năng</option>
+              <option value="2">Chuyên đề 2: Hệ đếm, Số nguyên & Byte</option>
+              <option value="3">Chuyên đề 3: CPU, Pipeline, Chế độ địa chỉ & Ngắt</option>
+              <option value="4">Chuyên đề 4: Phân cấp bộ nhớ, Cache & I/O</option>
+              <option value="5">Chuyên đề 5: Hệ điều hành, Tiến trình & Lập lịch</option>
+              <option value="6">Chuyên đề 6: Quản lý bộ nhớ, Bộ nhớ ảo, Tệp & Đĩa</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Anti-memorization Guarantee Banner -->
+        <div class="exam-guarantee-banner">
+          <div style="font-size: 1.25rem;">🔀</div>
+          <div>
+            <strong>Cơ chế thi chống học tủ & ghi nhớ vị trí máy móc:</strong>
+            <p style="margin-top: 4px; font-size: 0.88rem; color: var(--text-muted); line-height: 1.5;">
+              Hệ thống tự động sử dụng thuật toán <strong>Fisher-Yates chuẩn</strong> để xáo trộn ngẫu nhiên thứ tự các câu hỏi và hoán vị toàn bộ <strong>4 đáp án A/B/C/D</strong> mỗi lần bắt đầu bài thi.
+            </p>
+          </div>
+        </div>
+
+        <button id="btn-start-exam" class="btn btn-primary" style="font-size: 1.05rem; padding: 14px 42px;">
+          🚀 Bắt Đầu Làm Bài Thi Ngay
+        </button>
+      </div>
+
+      <!-- Screen 2: Exam Testing -->
+      <div id="exam-testing-view" style="display: none;">
+        
+        <!-- Sticky Exam Header -->
+        <div class="card" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; padding: 14px 20px;">
+          <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+            <span id="exam-timer" class="timer-badge">⏱️ 50:00</span>
+            <span id="exam-current-paper-title" class="badge badge-accent" style="font-size: 0.85rem; font-weight: 700;">
+              Bài thi số 1
+            </span>
+            <span style="font-size: 0.9rem; color: var(--text-muted);">
+              Đã trả lời: <strong id="exam-answered-count" style="color: var(--primary);">0/50</strong>
+            </span>
+          </div>
+
+          <div style="display: flex; gap: 10px;">
+            <button id="btn-exam-flag" class="btn btn-secondary" style="font-size: 0.85rem; padding: 8px 14px;">
+              🏳️ Đánh dấu xem lại
+            </button>
+            <button id="btn-exam-submit" class="btn btn-success" style="font-size: 0.85rem; padding: 8px 18px;">
+              ✅ Nộp Bài Thi
+            </button>
+          </div>
+        </div>
+
+        <!-- Testing Grid -->
+        <div class="practice-grid">
+          <div class="card question-card">
+            <div class="question-meta">
+              <div class="meta-badges">
+                <span id="exam-q-counter" class="badge badge-primary">Câu 1 / 50</span>
+                <span id="exam-part-badge" style="font-size: 0.8rem; color: var(--text-muted);">Phần</span>
+              </div>
+            </div>
+
+            <div id="exam-q-text" class="question-title">
+              Nội dung câu hỏi thi đang tải...
+            </div>
+
+            <div id="exam-options-list" class="options-list">
+              <!-- Rendered options with shuffled A, B, C, D -->
+            </div>
+
+            <div class="action-bar">
+              <button id="btn-exam-prev" class="btn btn-secondary">
+                ← Câu trước
+              </button>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">
+                Phím tắt: <strong>A, B, C, D</strong> • <strong>F</strong> (Đánh dấu) • <strong>← / →</strong>
+              </div>
+              <button id="btn-exam-next" class="btn btn-primary">
+                Câu tiếp theo →
+              </button>
+            </div>
+          </div>
+
+          <!-- Exam Palette -->
+          <div class="card palette-card">
+            <div class="palette-header">
+              <h3>Danh Sách Câu Hỏi</h3>
+            </div>
+            <div class="palette-legend">
+              <div class="legend-item"><span class="dot answered"></span> Đã chọn</div>
+              <div class="legend-item"><span class="dot flagged"></span> Đánh dấu</div>
+              <div class="legend-item"><span class="dot unanswered"></span> Chưa chọn</div>
+            </div>
+            <div id="exam-palette-grid" class="palette-grid">
+              <!-- Rendered exam question palette -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Screen 3: Exam Result -->
+      <div id="exam-result-view" style="display: none;">
+        <div class="card result-card">
+          <span id="result-paper-name" class="badge badge-primary" style="font-size: 0.88rem; margin-bottom: 12px; display: inline-block;">
+            Bài thi số 1 (Câu 1 – 50)
+          </span>
+          <h2 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 6px;">KẾT QUẢ BÀI THI THỬ</h2>
+          <p id="result-rating-text" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">
+            Đánh giá kết quả bài thi của bạn
+          </p>
+
+          <div class="score-circle">
+            <div id="result-score-10" class="score-value">8.5</div>
+            <div class="score-scale">Thang điểm 10</div>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-box green">
+              <div id="result-correct" class="number">34</div>
+              <div class="label">Số câu đúng</div>
+            </div>
+            <div class="stat-box red">
+              <div id="result-wrong" class="number">6</div>
+              <div class="label">Số câu sai</div>
+            </div>
+            <div class="stat-box blue">
+              <div id="result-percentage" class="number">85%</div>
+              <div class="label">Tỷ lệ chính xác</div>
+            </div>
+          </div>
+
+          <div style="display: flex; justify-content: center; gap: 20px; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 24px;">
+            <div>Tổng số câu: <strong id="result-total" style="color: var(--text-main);">50</strong></div>
+            <div>Thời gian hoàn thành: <strong id="result-time" style="color: var(--text-main);">25m 12s</strong></div>
+          </div>
+
+          <!-- Performance breakdown by chapter -->
+          <div style="text-align: left; margin: 24px 0; background: var(--bg); padding: 18px 22px; border-radius: var(--radius-sm); border: 1px solid var(--card-border);">
+            <h4 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 14px;">
+              📊 Đánh Giá Năng Lực Theo Từng Chuyên Đề:
+            </h4>
+            <div id="result-breakdown-list">
+              <!-- Dynamic chapter breakdown bars -->
+            </div>
+          </div>
+
+          <!-- Action buttons after exam -->
+          <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+            <button id="btn-exam-practice-wrong" class="btn btn-warning" style="font-weight: 700;">
+              🎯 Luyện Tập Ngay Câu Làm Sai
+            </button>
+            <button id="btn-exam-retake" class="btn btn-primary">
+              🔁 Thi Lại Đề Này (Xáo Mới)
+            </button>
+            <button id="btn-exam-review" class="btn btn-secondary">
+              🔍 Xem Lại Bài Làm & Lời Giải
+            </button>
+            <button id="btn-exam-retry" class="btn btn-secondary">
+              📋 Chọn Đề Khác
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Screen 4: Exam Review -->
+      <div id="exam-review-view" style="display: none;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <h2 style="font-size: 1.3rem; font-weight: 700;">Chi Tiết Bài Làm & Hướng Dẫn Giải</h2>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Hiển thị chính xác thứ tự đáp án A/B/C/D đã xáo trong lượt thi này.</p>
+          </div>
+          <button id="btn-review-back-result" class="btn btn-secondary">
+            ← Quay lại Bảng Điểm
+          </button>
+        </div>
+        <div id="exam-review-container">
+          <!-- All exam questions rendered with answers -->
+        </div>
+      </div>
+
+    </section>
+
+    <!-- VIEW 3: CẨM NANG CÔNG THỨC -->
+    <section id="view-cheatsheet" class="view-section">
+      <div id="cheatsheet-content">
+        <!-- Rendered by cheatsheet.js -->
+      </div>
+    </section>
+
+    <!-- VIEW 4: TIẾN ĐỘ, SPACED REPETITION & SỔ TAY SAI -->
+    <section id="view-stats" class="view-section">
+      <div id="stats-view-content">
+        <!-- Rendered by app.js -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modals -->
+
+  <!-- Submit Confirm Modal -->
+  <div id="modal-submit-confirm" class="modal-overlay">
+    <div class="modal-content">
+      <h3 class="modal-title">Xác Nhận Nộp Bài Thi</h3>
+      <p id="modal-submit-msg" style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+        Bạn có chắc chắn muốn nộp bài thi ngay bây giờ?
+      </p>
+      <div class="modal-actions">
+        <button id="btn-modal-cancel-submit" class="btn btn-secondary">Tiếp tục làm bài</button>
+        <button id="btn-modal-confirm-submit" class="btn btn-success">Đồng ý nộp bài</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reset Data Modal -->
+  <div id="modal-reset-confirm" class="modal-overlay">
+    <div class="modal-content">
+      <h3 class="modal-title" style="color: var(--danger);">Xóa Toàn Bộ Dữ Liệu?</h3>
+      <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+        Hành động này sẽ xóa toàn bộ tiến độ làm bài, hệ thống ghi nhớ Spaced Repetition và lịch sử các lần thi thử trên thiết bị này. Thao tác không thể hoàn tác.
+      </p>
+      <div class="modal-actions">
+        <button id="btn-modal-cancel-reset" class="btn btn-secondary">Hủy bỏ</button>
+        <button id="btn-modal-confirm-reset" class="btn btn-danger">Xác nhận xóa</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/practice.js"></script>
+  <script src="js/exam.js"></script>
+  <script src="js/cheatsheet.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

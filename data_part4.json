@@ -1,0 +1,312 @@
+[
+  {
+    "id": 120,
+    "question": "Bài toán \"sản xuất - tiêu thụ\" (producer-consumer) minh họa cho vấn đề gì trong đồng bộ hóa?",
+    "options": {
+      "A": "Sự phối hợp giữa các tiến trình chia sẻ vùng đệm (buffer) chung để tránh ghi đè hoặc đọc dữ liệu chưa hợp lệ",
+      "B": "Vấn đề định tuyến mạng",
+      "C": "Vấn đề phân mảnh bộ nhớ",
+      "D": "Vấn đề lập lịch đĩa"
+    }
+  },
+  {
+    "id": 121,
+    "question": "Bế tắc (deadlock) xảy ra khi nào?",
+    "options": {
+      "A": "Khi CPU chạy quá nhanh",
+      "B": "Khi bộ nhớ trống quá nhiều",
+      "C": "Khi có quá ít tiến trình đang chạy",
+      "D": "Khi một tập các tiến trình chờ đợi lẫn nhau để giải phóng tài nguyên mà không tiến trình nào có thể tiếp tục"
+    }
+  },
+  {
+    "id": 122,
+    "question": "Bốn điều kiện cần để xảy ra deadlock gồm?",
+    "options": {
+      "A": "Hai điều kiện: tốc độ và dung lượng",
+      "B": "Ba điều kiện: CPU, bộ nhớ và đĩa",
+      "C": "Loại trừ tương hỗ, giữ và chờ, không thu hồi được tài nguyên, chờ đợi vòng tròn",
+      "D": "Chỉ cần 1 điều kiện duy nhất"
+    }
+  },
+  {
+    "id": 123,
+    "question": "So với \"phòng ngừa deadlock\" (prevention), \"tránh deadlock\" (avoidance) khác biệt ở điểm nào?",
+    "options": {
+      "A": "Phòng ngừa deadlock chỉ áp dụng được sau khi deadlock đã xảy ra",
+      "B": "Tránh deadlock cho phép cấp phát tài nguyên linh hoạt hơn dựa trên trạng thái an toàn (ví dụ giải thuật Banker), còn phòng ngừa loại bỏ hẳn một trong bốn điều kiện cần",
+      "C": "Hai phương pháp hoàn toàn giống nhau",
+      "D": "Tránh deadlock luôn đơn giản hơn phòng ngừa"
+    }
+  },
+  {
+    "id": 124,
+    "question": "Mục tiêu chính của quản lý bộ nhớ trong hệ điều hành là gì?",
+    "options": {
+      "A": "Cấp phát, bảo vệ và tối ưu hóa việc sử dụng bộ nhớ chính cho các tiến trình",
+      "B": "Chỉ quản lý ổ đĩa cứng",
+      "C": "Chỉ quản lý thiết bị vào/ra",
+      "D": "Chỉ quản lý mạng máy tính"
+    }
+  },
+  {
+    "id": 125,
+    "question": "\"Bảo vệ bộ nhớ\" (memory protection) nhằm mục đích gì?",
+    "options": {
+      "A": "Tăng tốc độ truy cập bộ nhớ",
+      "B": "Giảm dung lượng bộ nhớ cần thiết",
+      "C": "Mã hóa toàn bộ dữ liệu trên đĩa",
+      "D": "Ngăn một tiến trình truy cập trái phép vào vùng nhớ của tiến trình khác hoặc hệ điều hành"
+    }
+  },
+  {
+    "id": 126,
+    "question": "Trong cấp phát liên tục (contiguous allocation), mỗi tiến trình được cấp phát như thế nào?",
+    "options": {
+      "A": "Chỉ cấp phát theo trang cố định",
+      "B": "Không cần cấp phát bộ nhớ",
+      "C": "Một vùng nhớ liên tục duy nhất đủ lớn để chứa toàn bộ tiến trình",
+      "D": "Nhiều vùng nhớ rời rạc bất kỳ"
+    }
+  },
+  {
+    "id": 127,
+    "question": "Phân mảnh ngoài (external fragmentation) xảy ra khi nào?",
+    "options": {
+      "A": "Khi không có tiến trình nào chạy",
+      "B": "Khi tổng bộ nhớ trống đủ lớn nhưng bị chia thành nhiều mảnh nhỏ không liên tục nên không thể cấp phát cho tiến trình cần vùng liên tục lớn",
+      "C": "Khi một tiến trình được cấp nhiều bộ nhớ hơn mức cần thiết bên trong vùng đã cấp",
+      "D": "Khi bộ nhớ hoàn toàn đầy"
+    }
+  },
+  {
+    "id": 128,
+    "question": "Phân mảnh trong (internal fragmentation) khác phân mảnh ngoài ở điểm nào?",
+    "options": {
+      "A": "Phân mảnh trong là phần bộ nhớ dư thừa bên trong một vùng đã cấp cho tiến trình, còn phân mảnh ngoài là các khoảng trống rời rạc giữa các vùng đã cấp phát",
+      "B": "Hai loại phân mảnh hoàn toàn giống nhau",
+      "C": "Phân mảnh trong chỉ xảy ra với ổ đĩa",
+      "D": "Phân mảnh ngoài chỉ xảy ra khi bộ nhớ còn trống hoàn toàn"
+    }
+  },
+  {
+    "id": 129,
+    "question": "Phân trang (paging) chia bộ nhớ vật lý và không gian địa chỉ logic thành các đơn vị gọi là gì?",
+    "options": {
+      "A": "Đoạn (segment) có kích thước thay đổi",
+      "B": "Khối (block) có kích thước ngẫu nhiên",
+      "C": "Tệp (file) độc lập",
+      "D": "Khung trang (frame) và trang (page) có kích thước cố định bằng nhau"
+    }
+  },
+  {
+    "id": 130,
+    "question": "Bảng trang (page table) dùng để làm gì?",
+    "options": {
+      "A": "Lưu lịch sử lập lịch CPU",
+      "B": "Lưu danh sách tiến trình đang chờ",
+      "C": "Ánh xạ số trang trong địa chỉ logic sang số khung trang tương ứng trong bộ nhớ vật lý",
+      "D": "Lưu nội dung tệp trên đĩa"
+    }
+  },
+  {
+    "id": 131,
+    "question": "Địa chỉ ảo gồm 32 bit, kích thước trang là 4KB (2^12). Số bit dùng cho phần offset trong trang là?",
+    "options": {
+      "A": "4 bit",
+      "B": "12 bit",
+      "C": "20 bit",
+      "D": "32 bit"
+    }
+  },
+  {
+    "id": 132,
+    "question": "Quy trình dịch địa chỉ ảo sang địa chỉ vật lý trong phân trang gồm các bước chính nào?",
+    "options": {
+      "A": "Tách địa chỉ ảo thành số trang và offset, tra bảng trang để lấy số khung trang, kết hợp số khung trang với offset để có địa chỉ vật lý",
+      "B": "Chỉ cần lấy trực tiếp địa chỉ ảo làm địa chỉ vật lý",
+      "C": "Chỉ cần đảo ngược thứ tự byte",
+      "D": "Không cần tra bảng trang"
+    }
+  },
+  {
+    "id": 133,
+    "question": "So với phân trang, phân đoạn (segmentation) khác biệt cơ bản ở điểm nào?",
+    "options": {
+      "A": "Phân đoạn và phân trang hoàn toàn giống nhau",
+      "B": "Phân đoạn luôn nhanh hơn phân trang trong mọi trường hợp",
+      "C": "Phân trang không cần bảng ánh xạ còn phân đoạn cần",
+      "D": "Phân đoạn chia chương trình theo các đơn vị logic (mã, dữ liệu, ngăn xếp) có kích thước thay đổi, còn phân trang chia theo đơn vị vật lý cố định"
+    }
+  },
+  {
+    "id": 134,
+    "question": "Bộ nhớ ảo (virtual memory) cho phép điều gì?",
+    "options": {
+      "A": "Xóa bỏ hoàn toàn nhu cầu bộ nhớ vật lý",
+      "B": "Chỉ dùng cho hệ thống nhúng nhỏ",
+      "C": "Cho phép chương trình sử dụng không gian địa chỉ lớn hơn dung lượng bộ nhớ vật lý thực tế bằng cách dùng đĩa làm phần mở rộng",
+      "D": "Tăng tốc độ CPU trực tiếp"
+    }
+  },
+  {
+    "id": 135,
+    "question": "Lỗi trang (page fault) xảy ra khi nào?",
+    "options": {
+      "A": "Khi có quá nhiều tiến trình đang chờ CPU",
+      "B": "Khi tiến trình truy cập một trang chưa được nạp vào bộ nhớ vật lý",
+      "C": "Khi CPU tính toán sai kết quả",
+      "D": "Khi ổ đĩa bị hỏng vật lý"
+    }
+  },
+  {
+    "id": 136,
+    "question": "Giải thuật thay trang FIFO (First In First Out) chọn trang nào để thay thế?",
+    "options": {
+      "A": "Trang được nạp vào bộ nhớ sớm nhất (lâu nhất trong bộ nhớ)",
+      "B": "Trang được truy cập gần đây nhất",
+      "C": "Trang sẽ không bao giờ được dùng lại",
+      "D": "Trang có kích thước lớn nhất"
+    }
+  },
+  {
+    "id": 137,
+    "question": "Giải thuật thay trang LRU (Least Recently Used) dựa trên nguyên tắc nào?",
+    "options": {
+      "A": "Thay thế trang được nạp vào đầu tiên",
+      "B": "Thay thế trang ngẫu nhiên",
+      "C": "Thay thế trang có địa chỉ nhỏ nhất",
+      "D": "Thay thế trang lâu nhất không được truy cập tính đến thời điểm hiện tại"
+    }
+  },
+  {
+    "id": 138,
+    "question": "Giải thuật thay trang tối ưu (Optimal) chọn thay thế trang nào?",
+    "options": {
+      "A": "Trang vào bộ nhớ sớm nhất",
+      "B": "Trang được chọn ngẫu nhiên",
+      "C": "Trang sẽ không được sử dụng trong thời gian dài nhất trong tương lai (lý thuyết, khó cài đặt thực tế)",
+      "D": "Trang được dùng gần đây nhất"
+    }
+  },
+  {
+    "id": 139,
+    "question": "Với chuỗi tham chiếu trang 1, 2, 3, 1, 4 và bộ nhớ có 3 khung trang, dùng giải thuật FIFO, số lỗi trang xảy ra là?",
+    "options": {
+      "A": "2",
+      "B": "4",
+      "C": "5",
+      "D": "3"
+    }
+  },
+  {
+    "id": 140,
+    "question": "Hiện tượng \"thrashing\" trong quản lý bộ nhớ ảo xảy ra khi nào?",
+    "options": {
+      "A": "Khi hệ thống dành quá nhiều thời gian xử lý lỗi trang (page fault) thay vì thực thi công việc thực sự, do quá nhiều tiến trình tranh chấp bộ nhớ vật lý ít ỏi",
+      "B": "Khi bộ nhớ vật lý dư thừa quá nhiều",
+      "C": "Khi CPU chạy quá nhanh so với bộ nhớ",
+      "D": "Khi không có tiến trình nào đang chạy"
+    }
+  },
+  {
+    "id": 141,
+    "question": "Khi so sánh ba giải thuật thay trang FIFO, LRU, Optimal về tỷ lệ lỗi trang trong thực tế, nhận định nào hợp lý nhất?",
+    "options": {
+      "A": "FIFO luôn cho kết quả tốt nhất trong mọi trường hợp",
+      "B": "Cả ba giải thuật luôn cho kết quả giống hệt nhau",
+      "C": "Optimal dễ cài đặt hơn LRU trong thực tế",
+      "D": "Optimal cho tỷ lệ lỗi trang thấp nhất về lý thuyết nhưng không khả thi để cài đặt thực tế; LRU thường xấp xỉ tốt và được dùng phổ biến hơn FIFO"
+    }
+  },
+  {
+    "id": 142,
+    "question": "Tổ chức tệp theo bản ghi (record) và khối (block) nhằm mục đích gì?",
+    "options": {
+      "A": "Chỉ nhằm tăng dung lượng đĩa",
+      "B": "Không liên quan đến hiệu năng truy cập",
+      "C": "Nhóm dữ liệu logic thành các đơn vị phù hợp để lưu trữ và truyền tải hiệu quả giữa bộ nhớ và thiết bị lưu trữ",
+      "D": "Chỉ nhằm mã hóa dữ liệu"
+    }
+  },
+  {
+    "id": 143,
+    "question": "Kỹ thuật đệm (buffering) trong quản lý tệp có tác dụng gì?",
+    "options": {
+      "A": "Xóa dữ liệu không cần thiết",
+      "B": "Giảm chênh lệch tốc độ giữa CPU và thiết bị lưu trữ bằng cách lưu tạm dữ liệu trong vùng nhớ đệm",
+      "C": "Mã hóa dữ liệu để bảo mật",
+      "D": "Tăng dung lượng lưu trữ vật lý của đĩa"
+    }
+  },
+  {
+    "id": 144,
+    "question": "So với truy cập tệp tuần tự (sequential access), truy cập trực tiếp (direct access) có ưu điểm gì?",
+    "options": {
+      "A": "Cho phép truy cập ngay tới bất kỳ bản ghi nào mà không cần đọc tuần tự từ đầu, phù hợp với dữ liệu cần truy cập ngẫu nhiên",
+      "B": "Luôn tốn ít bộ nhớ hơn truy cập tuần tự",
+      "C": "Chỉ dùng được cho tệp văn bản",
+      "D": "Luôn chậm hơn truy cập tuần tự trong mọi trường hợp"
+    }
+  },
+  {
+    "id": 145,
+    "question": "Các phương pháp cấp phát khối đĩa phổ biến gồm?",
+    "options": {
+      "A": "Chỉ có cấp phát liên tục duy nhất",
+      "B": "Cấp phát ngẫu nhiên và cấp phát cố định",
+      "C": "Chỉ có 1 phương pháp cho mọi hệ thống tệp",
+      "D": "Cấp phát liên tục, cấp phát theo danh sách liên kết, và cấp phát theo chỉ mục (indexed)"
+    }
+  },
+  {
+    "id": 146,
+    "question": "Cấp phát theo chỉ mục (indexed allocation) cho tệp trên đĩa hoạt động như thế nào?",
+    "options": {
+      "A": "Toàn bộ tệp phải nằm trong các khối liên tục",
+      "B": "Không sử dụng con trỏ nào cả",
+      "C": "Dùng một khối chỉ mục chứa con trỏ tới tất cả các khối dữ liệu thuộc tệp",
+      "D": "Mỗi khối chỉ chứa con trỏ tới khối tiếp theo duy nhất"
+    }
+  },
+  {
+    "id": 147,
+    "question": "Lập lịch truy nhập đĩa FCFS phục vụ các yêu cầu theo thứ tự nào?",
+    "options": {
+      "A": "Theo kích thước yêu cầu nhỏ nhất trước",
+      "B": "Theo đúng thứ tự yêu cầu đến hàng đợi",
+      "C": "Theo khoảng cách gần đầu đọc nhất trước",
+      "D": "Theo hướng quét một chiều cố định"
+    }
+  },
+  {
+    "id": 148,
+    "question": "Giải thuật SSTF (Shortest Seek Time First) chọn phục vụ yêu cầu nào tiếp theo?",
+    "options": {
+      "A": "Yêu cầu có khoảng cách gần vị trí đầu đọc hiện tại nhất",
+      "B": "Yêu cầu đến trước trong hàng đợi",
+      "C": "Yêu cầu ở xa đầu đọc nhất",
+      "D": "Yêu cầu có kích thước dữ liệu lớn nhất"
+    }
+  },
+  {
+    "id": 149,
+    "question": "So với SSTF, giải thuật SCAN có ưu điểm gì trong việc tránh tình trạng đói (starvation)?",
+    "options": {
+      "A": "SCAN luôn chậm hơn SSTF trong mọi trường hợp và cũng gây đói tương tự",
+      "B": "SCAN không quan tâm đến vị trí yêu cầu",
+      "C": "SCAN chỉ phục vụ được một yêu cầu duy nhất mỗi lượt",
+      "D": "SCAN quét đầu đọc theo một hướng cố định đến cuối rồi đảo chiều, đảm bảo mọi yêu cầu đều được phục vụ, tránh tình trạng yêu cầu ở xa bị bỏ đói kéo dài như SSTF có thể gây ra"
+    }
+  },
+  {
+    "id": 150,
+    "question": "Đầu đọc đang ở track 50, hàng đợi yêu cầu gồm track 20, 90, 60, quét theo hướng tăng dần (SCAN). Thứ tự phục vụ là?",
+    "options": {
+      "A": "90, 60, 20",
+      "B": "20, 90, 60",
+      "C": "60, 90, 20",
+      "D": "20, 60, 90"
+    }
+  }
+]

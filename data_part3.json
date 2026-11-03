@@ -1,0 +1,342 @@
+[
+  {
+    "id": 86,
+    "question": "So với ổ đĩa từ (HDD), ổ thể rắn (SSD) có đặc điểm gì?",
+    "options": {
+      "A": "Có tốc độ truy cập chậm hơn HDD",
+      "B": "Sử dụng đĩa từ quay để lưu dữ liệu",
+      "C": "Không có bộ phận cơ khí chuyển động, tốc độ truy cập nhanh hơn nhưng thường đắt hơn trên mỗi GB",
+      "D": "Luôn rẻ hơn HDD trên mỗi GB"
+    }
+  },
+  {
+    "id": 87,
+    "question": "Thời gian truy cập của ổ đĩa từ (HDD) chịu ảnh hưởng chính bởi các thành phần nào?",
+    "options": {
+      "A": "Chỉ phụ thuộc vào tần số CPU",
+      "B": "Thời gian tìm kiếm (seek time), độ trễ quay (rotational latency) và thời gian truyền dữ liệu",
+      "C": "Chỉ phụ thuộc vào dung lượng đĩa",
+      "D": "Chỉ phụ thuộc vào hệ điều hành"
+    }
+  },
+  {
+    "id": 88,
+    "question": "Hệ thống vào/ra (I/O) giao tiếp với CPU thông qua thành phần trung gian nào?",
+    "options": {
+      "A": "Các cổng vào/ra (I/O port) và bus hệ thống",
+      "B": "Trực tiếp qua thanh ghi PC",
+      "C": "Thông qua bộ nhớ cache duy nhất",
+      "D": "Không cần trung gian nào"
+    }
+  },
+  {
+    "id": 89,
+    "question": "Có hai phương pháp địa chỉ hóa cổng vào/ra phổ biến là?",
+    "options": {
+      "A": "I/O tuần tự và I/O song song",
+      "B": "I/O tĩnh và I/O động",
+      "C": "I/O đồng bộ và I/O bất đồng bộ",
+      "D": "I/O ánh xạ bộ nhớ (memory-mapped I/O) và I/O cách ly (isolated/port-mapped I/O)"
+    }
+  },
+  {
+    "id": 90,
+    "question": "Phương pháp điều khiển vào/ra \"thăm dò\" (polling) hoạt động như thế nào?",
+    "options": {
+      "A": "Dữ liệu được truyền trực tiếp không qua CPU",
+      "B": "CPU không cần quan tâm đến thiết bị",
+      "C": "CPU liên tục kiểm tra trạng thái thiết bị để biết khi nào sẵn sàng trao đổi dữ liệu",
+      "D": "Thiết bị tự động gửi tín hiệu ngắt cho CPU"
+    }
+  },
+  {
+    "id": 91,
+    "question": "Nhược điểm chính của phương pháp thăm dò (polling) là?",
+    "options": {
+      "A": "Chỉ dùng được cho ổ đĩa",
+      "B": "Tốn nhiều thời gian CPU để kiểm tra trạng thái, đặc biệt khi thiết bị chậm",
+      "C": "Không thể sử dụng với thiết bị chậm",
+      "D": "Không cần CPU tham gia nên tốn tài nguyên bộ nhớ"
+    }
+  },
+  {
+    "id": 92,
+    "question": "So với thăm dò, phương pháp điều khiển bằng ngắt (interrupt-driven I/O) có ưu điểm gì?",
+    "options": {
+      "A": "CPU không cần liên tục kiểm tra, chỉ xử lý khi thiết bị thực sự sẵn sàng, giải phóng thời gian CPU cho công việc khác",
+      "B": "Luôn tốn nhiều CPU hơn thăm dò",
+      "C": "Không cần phần cứng hỗ trợ",
+      "D": "Chỉ hoạt động với ổ đĩa cứng"
+    }
+  },
+  {
+    "id": 93,
+    "question": "DMA là viết tắt của thuật ngữ nào?",
+    "options": {
+      "A": "Data Memory Allocation",
+      "B": "Dynamic Memory Addressing",
+      "C": "Device Management Access",
+      "D": "Direct Memory Access (truy nhập bộ nhớ trực tiếp)"
+    }
+  },
+  {
+    "id": 94,
+    "question": "Ưu điểm chính của DMA so với thăm dò và ngắt là?",
+    "options": {
+      "A": "DMA không cần bus hệ thống",
+      "B": "DMA chỉ dùng được cho bàn phím",
+      "C": "Cho phép thiết bị ngoại vi truyền dữ liệu trực tiếp với bộ nhớ mà không cần CPU can thiệp vào từng byte, giảm tải cho CPU",
+      "D": "DMA luôn chậm hơn thăm dò"
+    }
+  },
+  {
+    "id": 95,
+    "question": "Khi so sánh chi phí CPU của ba phương pháp thăm dò, ngắt và DMA cho việc truyền một khối dữ liệu lớn, nhận định nào hợp lý nhất?",
+    "options": {
+      "A": "Cả ba phương pháp có chi phí CPU như nhau",
+      "B": "DMA thường tối ưu nhất cho khối dữ liệu lớn vì giảm tối đa sự can thiệp của CPU vào từng đơn vị dữ liệu",
+      "C": "Thăm dò luôn tối ưu nhất cho mọi trường hợp",
+      "D": "Ngắt luôn tốn CPU nhiều hơn thăm dò"
+    }
+  },
+  {
+    "id": 96,
+    "question": "Bus hệ thống (system bus) trong máy tính thường được chia thành mấy loại tín hiệu chính?",
+    "options": {
+      "A": "3 loại: bus địa chỉ, bus dữ liệu, bus điều khiển",
+      "B": "Chỉ 1 loại duy nhất",
+      "C": "2 loại: bus trong và bus ngoài",
+      "D": "5 loại tương ứng 5 thiết bị ngoại vi"
+    }
+  },
+  {
+    "id": 97,
+    "question": "Hệ điều hành (Operating System) có vai trò chính nào?",
+    "options": {
+      "A": "Chỉ dùng để chạy trình duyệt web",
+      "B": "Chỉ biên dịch chương trình",
+      "C": "Thay thế hoàn toàn phần cứng",
+      "D": "Quản lý tài nguyên phần cứng và cung cấp giao diện cho người dùng/ứng dụng sử dụng máy tính"
+    }
+  },
+  {
+    "id": 98,
+    "question": "Chức năng \"quản lý tiến trình\" của hệ điều hành bao gồm công việc gì?",
+    "options": {
+      "A": "Chỉ hiển thị giao diện đồ họa",
+      "B": "Chỉ quản lý bàn phím và chuột",
+      "C": "Tạo, lập lịch, đồng bộ hóa và kết thúc các tiến trình đang chạy",
+      "D": "Chỉ định dạng ổ đĩa"
+    }
+  },
+  {
+    "id": 99,
+    "question": "Hệ điều hành đa nhiệm (multitasking) khác hệ điều hành đơn nhiệm (single-tasking) ở điểm nào?",
+    "options": {
+      "A": "Hai loại này giống hệt nhau",
+      "B": "Đa nhiệm cho phép nhiều tiến trình cùng tồn tại và luân phiên sử dụng CPU, đơn nhiệm chỉ chạy một chương trình tại một thời điểm",
+      "C": "Đa nhiệm chỉ chạy được trên siêu máy tính",
+      "D": "Đơn nhiệm nhanh hơn đa nhiệm trong mọi trường hợp"
+    }
+  },
+  {
+    "id": 100,
+    "question": "Lời gọi hệ thống (system call) dùng để làm gì?",
+    "options": {
+      "A": "Cho phép chương trình ứng dụng yêu cầu dịch vụ từ nhân hệ điều hành (kernel)",
+      "B": "Biên dịch mã nguồn thành mã máy",
+      "C": "Hiển thị đồ họa trực tiếp không qua hệ điều hành",
+      "D": "Chỉ dùng để tắt máy"
+    }
+  },
+  {
+    "id": 101,
+    "question": "Sự khác biệt giữa chế độ nhân (kernel mode) và chế độ người dùng (user mode) là gì?",
+    "options": {
+      "A": "Hai chế độ có quyền truy cập như nhau",
+      "B": "Chế độ người dùng có quyền cao hơn chế độ nhân",
+      "C": "Chế độ nhân chỉ dùng khi tắt máy",
+      "D": "Chế độ nhân có toàn quyền truy cập phần cứng và tài nguyên hệ thống, chế độ người dùng bị giới hạn quyền để đảm bảo an toàn"
+    }
+  },
+  {
+    "id": 102,
+    "question": "Khi một chương trình gọi system call, CPU cần chuyển từ chế độ nào sang chế độ nào?",
+    "options": {
+      "A": "Không cần chuyển chế độ",
+      "B": "Chuyển sang chế độ ngắt riêng biệt",
+      "C": "Từ chế độ người dùng (user mode) sang chế độ nhân (kernel mode)",
+      "D": "Từ chế độ nhân sang chế độ người dùng"
+    }
+  },
+  {
+    "id": 103,
+    "question": "Khối điều khiển tiến trình (PCB - Process Control Block) lưu trữ thông tin gì?",
+    "options": {
+      "A": "Chỉ lưu địa chỉ IP mạng",
+      "B": "Trạng thái, giá trị thanh ghi, thông tin lập lịch và các tài nguyên của tiến trình",
+      "C": "Chỉ lưu mã nguồn chương trình",
+      "D": "Chỉ lưu tên người dùng"
+    }
+  },
+  {
+    "id": 104,
+    "question": "Tiến trình (process) khác luồng (thread) chủ yếu ở điểm nào?",
+    "options": {
+      "A": "Mỗi tiến trình có không gian địa chỉ bộ nhớ riêng, còn các luồng trong cùng một tiến trình chia sẻ chung không gian địa chỉ đó",
+      "B": "Luồng luôn chạy chậm hơn tiến trình",
+      "C": "Tiến trình không thể tạo ra nhiều luồng",
+      "D": "Hai khái niệm hoàn toàn giống nhau"
+    }
+  },
+  {
+    "id": 105,
+    "question": "Sơ đồ trạng thái tiến trình cơ bản gồm các trạng thái nào?",
+    "options": {
+      "A": "Chỉ có chạy và dừng",
+      "B": "Chỉ có 2 trạng thái bật và tắt",
+      "C": "Chỉ có trạng thái chờ duy nhất",
+      "D": "Mới tạo, sẵn sàng, đang chạy, chờ (blocked), kết thúc"
+    }
+  },
+  {
+    "id": 106,
+    "question": "Một tiến trình đang ở trạng thái \"đang chạy\" phải chờ một thao tác vào/ra hoàn tất. Tiến trình đó sẽ chuyển sang trạng thái nào?",
+    "options": {
+      "A": "Mới tạo (new)",
+      "B": "Kết thúc (terminated)",
+      "C": "Chờ (blocked/waiting)",
+      "D": "Sẵn sàng (ready)"
+    }
+  },
+  {
+    "id": 107,
+    "question": "Chuyển ngữ cảnh (context switch) là gì?",
+    "options": {
+      "A": "Quá trình sao lưu dữ liệu ra đĩa",
+      "B": "Quá trình lưu trạng thái của tiến trình đang chạy và khôi phục trạng thái của tiến trình khác để CPU chuyển sang thực thi",
+      "C": "Quá trình biên dịch chương trình",
+      "D": "Quá trình cài đặt hệ điều hành mới"
+    }
+  },
+  {
+    "id": 108,
+    "question": "Vì sao chuyển ngữ cảnh (context switch) được xem là chi phí (overhead) cần hạn chế?",
+    "options": {
+      "A": "Vì thời gian dùng để lưu/khôi phục trạng thái không thực hiện công việc hữu ích cho tiến trình nào cả",
+      "B": "Vì nó làm tăng dung lượng ổ đĩa",
+      "C": "Vì nó luôn gây lỗi hệ thống",
+      "D": "Vì nó không liên quan đến hiệu năng"
+    }
+  },
+  {
+    "id": 109,
+    "question": "Giải thuật lập lịch FCFS (First Come First Served) hoạt động theo nguyên tắc nào?",
+    "options": {
+      "A": "Tiến trình có thời gian thực thi ngắn nhất được ưu tiên",
+      "B": "Tiến trình có độ ưu tiên cao nhất được chạy trước",
+      "C": "Các tiến trình chia sẻ CPU theo lượng thời gian cố định",
+      "D": "Tiến trình nào đến hàng đợi trước được phục vụ trước"
+    }
+  },
+  {
+    "id": 110,
+    "question": "Giải thuật SJF (Shortest Job First) ưu tiên chọn tiến trình nào để thực thi?",
+    "options": {
+      "A": "Tiến trình có độ ưu tiên thấp nhất",
+      "B": "Tiến trình chạy lâu nhất",
+      "C": "Tiến trình có thời gian thực thi (burst time) ngắn nhất trong hàng đợi sẵn sàng",
+      "D": "Tiến trình đến trước"
+    }
+  },
+  {
+    "id": 111,
+    "question": "So với FCFS, SJF có ưu điểm gì về mặt lý thuyết?",
+    "options": {
+      "A": "Luôn hoàn thành nhanh hơn Round Robin trong mọi trường hợp",
+      "B": "Cho thời gian chờ trung bình tối thiểu (tối ưu) nếu biết trước thời gian thực thi của các tiến trình",
+      "C": "Luôn công bằng hơn cho mọi tiến trình",
+      "D": "Dễ cài đặt hơn vì không cần biết trước thời gian thực thi"
+    }
+  },
+  {
+    "id": 112,
+    "question": "Ba tiến trình P1, P2, P3 lần lượt có thời gian thực thi 5, 3, 8 (ms), đến cùng lúc, lập lịch theo SJF. Thời gian chờ của P3 là bao nhiêu?",
+    "options": {
+      "A": "8ms",
+      "B": "0ms",
+      "C": "3ms",
+      "D": "5ms"
+    }
+  },
+  {
+    "id": 113,
+    "question": "Giải thuật Round Robin phân phối CPU cho các tiến trình như thế nào?",
+    "options": {
+      "A": "Tiến trình ngắn nhất luôn được ưu tiên tuyệt đối",
+      "B": "Chỉ tiến trình có độ ưu tiên cao nhất mới được chạy",
+      "C": "Tiến trình đến trước sẽ chạy đến khi hoàn thành",
+      "D": "Mỗi tiến trình được cấp một khoảng thời gian cố định (quantum), luân phiên theo hàng đợi vòng tròn"
+    }
+  },
+  {
+    "id": 114,
+    "question": "Nếu quantum trong Round Robin quá nhỏ, hệ thống sẽ gặp vấn đề gì?",
+    "options": {
+      "A": "Không ảnh hưởng gì đến hiệu năng",
+      "B": "Tiến trình sẽ không bao giờ hoàn thành",
+      "C": "Chi phí chuyển ngữ cảnh tăng cao, làm giảm hiệu năng tổng thể dù thời gian đáp ứng có vẻ nhanh",
+      "D": "Hệ thống sẽ nhanh hơn tuyệt đối, không có nhược điểm"
+    }
+  },
+  {
+    "id": 115,
+    "question": "Giải thuật lập lịch theo độ ưu tiên (priority scheduling) có thể gặp vấn đề gì nếu không xử lý tốt?",
+    "options": {
+      "A": "Luôn cho thời gian chờ bằng 0",
+      "B": "Tiến trình có độ ưu tiên thấp có thể bị \"đói\" (starvation), không bao giờ được cấp CPU",
+      "C": "Luôn đảm bảo công bằng tuyệt đối cho mọi tiến trình",
+      "D": "Không thể xảy ra deadlock"
+    }
+  },
+  {
+    "id": 116,
+    "question": "Một tiến trình có thời gian đến bằng 0, thời gian thực thi 4ms, hoàn thành lúc 4ms. Thời gian hoàn thành (turnaround time) của tiến trình là?",
+    "options": {
+      "A": "4ms",
+      "B": "0ms",
+      "C": "8ms",
+      "D": "Không xác định được"
+    }
+  },
+  {
+    "id": 117,
+    "question": "Đoạn găng (critical section) là gì?",
+    "options": {
+      "A": "Đoạn mã chạy nhanh nhất trong chương trình",
+      "B": "Đoạn mã không cần đồng bộ",
+      "C": "Đoạn mã chỉ CPU mới truy cập được",
+      "D": "Đoạn mã trong đó tiến trình truy cập tài nguyên dùng chung mà không được có tiến trình khác truy cập đồng thời"
+    }
+  },
+  {
+    "id": 118,
+    "question": "Semaphore được sử dụng trong đồng bộ hóa tiến trình với mục đích gì?",
+    "options": {
+      "A": "Chỉ dùng để lập lịch CPU",
+      "B": "Chỉ dùng để cấp phát bộ nhớ",
+      "C": "Kiểm soát số lượng tiến trình được phép truy cập đồng thời vào tài nguyên dùng chung, thông qua các thao tác wait/signal",
+      "D": "Chỉ dùng để đo thời gian thực thi"
+    }
+  },
+  {
+    "id": 119,
+    "question": "Semaphore nhị phân (binary semaphore) có giá trị nằm trong khoảng nào?",
+    "options": {
+      "A": "Chỉ có giá trị âm",
+      "B": "0 hoặc 1",
+      "C": "-1 đến 1",
+      "D": "0 đến số nguyên bất kỳ không giới hạn"
+    }
+  }
+]

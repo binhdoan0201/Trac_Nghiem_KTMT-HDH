@@ -1,0 +1,14 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.tmp
+
+# Temporary OCR extract files
+page_0.png
+pdf_pages/

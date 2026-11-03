@@ -1,0 +1,422 @@
+[
+  {
+    "id": 1,
+    "question": "Mô hình von Neumann quy định máy tính gồm các thành phần chính nào?",
+    "options": {
+      "A": "Chỉ có CPU và bộ nhớ",
+      "B": "Chỉ có thiết bị vào và thiết bị ra",
+      "C": "CPU và hệ điều hành",
+      "D": "CPU, bộ nhớ, thiết bị vào/ra và bus liên kết chung"
+    }
+  },
+  {
+    "id": 2,
+    "question": "Chu kỳ lệnh cơ bản trong mô hình von Neumann diễn ra theo thứ tự nào?",
+    "options": {
+      "A": "Thực thi → Nạp lệnh → Giải mã",
+      "B": "Nạp lệnh → Thực thi → Giải mã",
+      "C": "Nạp lệnh (Fetch) → Giải mã (Decode) → Thực thi (Execute)",
+      "D": "Giải mã → Nạp lệnh → Thực thi"
+    }
+  },
+  {
+    "id": 3,
+    "question": "Sự khác biệt giữa \"kiến trúc máy tính\" (computer architecture) và \"tổ chức máy tính\" (computer organization) là gì?",
+    "options": {
+      "A": "Kiến trúc là cách bố trí vật lý linh kiện, tổ chức là tập lệnh",
+      "B": "Kiến trúc là góc nhìn của lập trình viên (tập lệnh, giao diện), tổ chức là cách hiện thực phần cứng bên trong",
+      "C": "Kiến trúc chỉ nói về phần mềm, tổ chức chỉ nói về phần cứng",
+      "D": "Hai khái niệm này hoàn toàn giống nhau"
+    }
+  },
+  {
+    "id": 4,
+    "question": "CPI là viết tắt của thuật ngữ nào trong đánh giá hiệu năng CPU?",
+    "options": {
+      "A": "Cycles Per Instruction (số chu kỳ xung nhịp trên một lệnh)",
+      "B": "Cycles Per Interrupt",
+      "C": "Computer Performance Index",
+      "D": "Central Processing Interface"
+    }
+  },
+  {
+    "id": 5,
+    "question": "Một chương trình có 1000 lệnh, CPI trung bình là 2, tần số xung nhịp CPU là 1GHz. Thời gian thực thi chương trình là?",
+    "options": {
+      "A": "2 mili giây",
+      "B": "500 nano giây",
+      "C": "1 giây",
+      "D": "2 micro giây"
+    }
+  },
+  {
+    "id": 6,
+    "question": "Nếu tần số xung nhịp CPU tăng gấp đôi nhưng CPI cũng tăng gấp đôi, thời gian thực thi chương trình sẽ:",
+    "options": {
+      "A": "Tăng gấp đôi",
+      "B": "Giảm 4 lần",
+      "C": "Không đổi",
+      "D": "Giảm một nửa"
+    }
+  },
+  {
+    "id": 7,
+    "question": "Luật Amdahl được dùng để làm gì?",
+    "options": {
+      "A": "Tính tỷ lệ lỗi trang bộ nhớ",
+      "B": "Tính giới hạn tốc độ tăng hiệu năng khi chỉ cải thiện một phần của hệ thống",
+      "C": "Tính dung lượng bộ nhớ cache tối ưu",
+      "D": "Xác định số lượng thanh ghi cần thiết"
+    }
+  },
+  {
+    "id": 8,
+    "question": "Nếu 80% chương trình có thể tăng tốc lên vô hạn (phần còn lại không đổi), theo luật Amdahl tốc độ tăng tối đa của toàn hệ thống là?",
+    "options": {
+      "A": "5 lần",
+      "B": "4 lần",
+      "C": "10 lần",
+      "D": "Không giới hạn"
+    }
+  },
+  {
+    "id": 9,
+    "question": "Vì sao chỉ tăng tần số xung nhịp CPU không đảm bảo hiệu năng tổng thể tăng tương ứng?",
+    "options": {
+      "A": "Vì xung nhịp không liên quan đến hiệu năng",
+      "B": "Vì CPI luôn giảm khi tăng xung nhịp",
+      "C": "Vì số lệnh của chương trình luôn giảm khi tăng xung nhịp",
+      "D": "Vì hiệu năng còn phụ thuộc vào CPI, số lệnh thực thi và các thành phần khác như bộ nhớ, I/O"
+    }
+  },
+  {
+    "id": 10,
+    "question": "Trong phân cấp hệ thống máy tính, hệ điều hành đóng vai trò gì?",
+    "options": {
+      "A": "Thay thế hoàn toàn phần cứng",
+      "B": "Chỉ dùng để chạy các ứng dụng văn phòng",
+      "C": "Là lớp trung gian quản lý phần cứng và cung cấp giao diện cho ứng dụng chạy bên trên",
+      "D": "Là một phần của CPU"
+    }
+  },
+  {
+    "id": 11,
+    "question": "Siêu máy tính (supercomputer) thường được sử dụng cho mục đích chính nào?",
+    "options": {
+      "A": "Chỉ dùng trong gia đình",
+      "B": "Tính toán khoa học, mô phỏng phức tạp đòi hỏi hiệu năng cực cao",
+      "C": "Soạn thảo văn bản cá nhân",
+      "D": "Chỉ dùng làm máy chủ web nhỏ"
+    }
+  },
+  {
+    "id": 12,
+    "question": "Thời gian thực thi CPU (CPU execution time) được tính theo công thức nào?",
+    "options": {
+      "A": "Số lệnh × CPI / Tần số xung nhịp",
+      "B": "Số lệnh × Tần số xung nhịp",
+      "C": "CPI / Số lệnh",
+      "D": "Tần số xung nhịp / CPI"
+    }
+  },
+  {
+    "id": 13,
+    "question": "So với máy tính để bàn, máy tính nhúng (embedded system) thường được thiết kế theo hướng nào?",
+    "options": {
+      "A": "Có hiệu năng cao nhất để chạy đa nhiệm",
+      "B": "Có kích thước lớn hơn máy tính để bàn",
+      "C": "Luôn có hệ điều hành đầy đủ như máy tính để bàn",
+      "D": "Tối ưu cho một chức năng chuyên biệt, tiết kiệm năng lượng và chi phí"
+    }
+  },
+  {
+    "id": 14,
+    "question": "Nhận định nào sau đây về luật Amdahl là chính xác?",
+    "options": {
+      "A": "Luật Amdahl chỉ áp dụng cho bộ nhớ cache",
+      "B": "Luật Amdahl không liên quan đến tỷ lệ phần trăm được cải thiện",
+      "C": "Cải thiện một phần nhỏ của hệ thống chỉ mang lại lợi ích giới hạn cho hiệu năng tổng thể, dù phần đó được tăng tốc vô hạn",
+      "D": "Luật Amdahl khẳng định hiệu năng luôn tăng tuyến tính theo số lõi CPU"
+    }
+  },
+  {
+    "id": 15,
+    "question": "Một hệ thống có hai loại lệnh: loại 1 chiếm 40% với CPI=2, loại 2 chiếm 60% với CPI=4. CPI trung bình là?",
+    "options": {
+      "A": "4,0",
+      "B": "3,2",
+      "C": "3,0",
+      "D": "2,8"
+    }
+  },
+  {
+    "id": 16,
+    "question": "Số nhị phân 1010 có giá trị thập phân là?",
+    "options": {
+      "A": "10",
+      "B": "8",
+      "C": "12",
+      "D": "5"
+    }
+  },
+  {
+    "id": 17,
+    "question": "Chuyển số thập phân 45 sang hệ nhị phân là?",
+    "options": {
+      "A": "101100",
+      "B": "100101",
+      "C": "101110",
+      "D": "101101"
+    }
+  },
+  {
+    "id": 18,
+    "question": "Chuyển số hệ 16 (hex) A3 sang thập phân là?",
+    "options": {
+      "A": "173",
+      "B": "93",
+      "C": "163",
+      "D": "153"
+    }
+  },
+  {
+    "id": 19,
+    "question": "Trong hệ đếm cơ số 16 (hex), mỗi chữ số hex tương ứng với bao nhiêu bit nhị phân?",
+    "options": {
+      "A": "3 bit",
+      "B": "4 bit",
+      "C": "2 bit",
+      "D": "8 bit"
+    }
+  },
+  {
+    "id": 20,
+    "question": "Trong biểu diễn dấu - độ lớn (sign-magnitude) với 8 bit, bit cao nhất (MSB) dùng để?",
+    "options": {
+      "A": "Biểu diễn dấu của số (0: dương, 1: âm)",
+      "B": "Biểu diễn giá trị tuyệt đối của số",
+      "C": "Luôn luôn bằng 0",
+      "D": "Biểu diễn số mũ của số thực"
+    }
+  },
+  {
+    "id": 21,
+    "question": "Nhược điểm chính của biểu diễn bù 1 (1's complement) so với bù 2 là gì?",
+    "options": {
+      "A": "Không biểu diễn được số âm",
+      "B": "Chiếm nhiều bit hơn bù 2",
+      "C": "Không thể dùng trong máy tính hiện đại",
+      "D": "Có hai cách biểu diễn số 0 (+0 và -0), gây phức tạp khi cộng"
+    }
+  },
+  {
+    "id": 22,
+    "question": "Biểu diễn số -5 bằng bù 2 với 8 bit là?",
+    "options": {
+      "A": "00000101",
+      "B": "10000101",
+      "C": "11111011",
+      "D": "11111010"
+    }
+  },
+  {
+    "id": 23,
+    "question": "Với 8 bit biểu diễn bù 2, miền giá trị biểu diễn được là?",
+    "options": {
+      "A": "-256 đến 255",
+      "B": "-128 đến 127",
+      "C": "-127 đến 128",
+      "D": "-128 đến 128"
+    }
+  },
+  {
+    "id": 24,
+    "question": "Khi cộng hai số nguyên dương ở biểu diễn bù 2 mà kết quả cho ra một số âm, hiện tượng gì đã xảy ra?",
+    "options": {
+      "A": "Tràn số (overflow) do kết quả vượt quá miền biểu diễn",
+      "B": "Lỗi làm tròn số thực",
+      "C": "Lỗi mất dấu chấm động",
+      "D": "Lỗi endianness"
+    }
+  },
+  {
+    "id": 25,
+    "question": "Thực hiện phép cộng bù 2 8-bit: 01111111 + 00000001, kết quả và nhận xét đúng là?",
+    "options": {
+      "A": "10000001 và không có tràn số",
+      "B": "01111110 và không có tràn số",
+      "C": "00000000 và không có tràn số",
+      "D": "10000000 - xảy ra tràn số vì 127+1 vượt miền số dương biểu diễn được"
+    }
+  },
+  {
+    "id": 26,
+    "question": "Cách phát hiện tràn số (overflow) khi cộng hai số nguyên bù 2 là?",
+    "options": {
+      "A": "Khi có carry ra khỏi bit thấp nhất",
+      "B": "Không thể phát hiện được tràn số",
+      "C": "Khi bit nhớ vào MSB khác với bit nhớ ra khỏi MSB (carry-in khác carry-out)",
+      "D": "Khi kết quả luôn luôn dương"
+    }
+  },
+  {
+    "id": 27,
+    "question": "Phép trừ hai số nguyên trong máy tính (dùng bù 2) thường được thực hiện bằng cách nào so với phép cộng?",
+    "options": {
+      "A": "Không thể thực hiện trực tiếp bằng phần cứng",
+      "B": "Lấy bù 2 của số trừ rồi cộng vào số bị trừ, tận dụng lại mạch cộng",
+      "C": "Dùng mạch trừ riêng biệt hoàn toàn khác mạch cộng",
+      "D": "Chia số trừ cho -1"
+    }
+  },
+  {
+    "id": 28,
+    "question": "Chuẩn IEEE 754 cho số thực dấu chấm động 32-bit (single precision) gồm các trường nào?",
+    "options": {
+      "A": "1 bit dấu, 8 bit mũ, 23 bit phần định trị",
+      "B": "1 bit dấu, 11 bit mũ, 52 bit định trị",
+      "C": "1 bit dấu, 23 bit mũ, 8 bit định trị",
+      "D": "2 bit dấu, 30 bit định trị"
+    }
+  },
+  {
+    "id": 29,
+    "question": "Độ lệch (bias) trong biểu diễn số mũ của IEEE 754 single precision có giá trị bao nhiêu?",
+    "options": {
+      "A": "128",
+      "B": "1023",
+      "C": "255",
+      "D": "127"
+    }
+  },
+  {
+    "id": 30,
+    "question": "Trong IEEE 754, bit dấu bằng 1 nghĩa là gì?",
+    "options": {
+      "A": "Số 0",
+      "B": "Số vô cùng",
+      "C": "Số âm",
+      "D": "Số dương"
+    }
+  },
+  {
+    "id": 31,
+    "question": "Nguyên nhân chính gây ra sai số làm tròn (rounding error) khi biểu diễn số thực trong máy tính là?",
+    "options": {
+      "A": "Do bit dấu bị lỗi",
+      "B": "Số bit hữu hạn của phần định trị không đủ biểu diễn chính xác mọi số thực",
+      "C": "Do lỗi phần cứng CPU",
+      "D": "Do hệ điều hành tính toán sai"
+    }
+  },
+  {
+    "id": 32,
+    "question": "Vì sao không nên so sánh trực tiếp hai số thực dấu chấm động bằng phép so sánh bằng (==) trong lập trình?",
+    "options": {
+      "A": "Vì sai số làm tròn có thể khiến hai giá trị về mặt toán học bằng nhau nhưng biểu diễn nhị phân khác nhau",
+      "B": "Vì số thực luôn lớn hơn số nguyên",
+      "C": "Vì máy tính không hỗ trợ so sánh số thực",
+      "D": "Vì IEEE 754 không cho phép so sánh"
+    }
+  },
+  {
+    "id": 33,
+    "question": "Mã ASCII chuẩn sử dụng bao nhiêu bit để biểu diễn một ký tự?",
+    "options": {
+      "A": "8 bit",
+      "B": "16 bit",
+      "C": "32 bit",
+      "D": "7 bit"
+    }
+  },
+  {
+    "id": 34,
+    "question": "Ưu điểm chính của Unicode so với ASCII là gì?",
+    "options": {
+      "A": "Chỉ dùng cho tiếng Anh",
+      "B": "Không tương thích với máy tính hiện đại",
+      "C": "Có thể biểu diễn được hầu hết các ký tự của mọi ngôn ngữ trên thế giới",
+      "D": "Chiếm ít bộ nhớ hơn ASCII"
+    }
+  },
+  {
+    "id": 35,
+    "question": "\"Endianness\" trong máy tính đề cập đến điều gì?",
+    "options": {
+      "A": "Cách đánh địa chỉ bộ nhớ ảo",
+      "B": "Thứ tự sắp xếp các byte của một giá trị nhiều byte trong bộ nhớ",
+      "C": "Thứ tự thực thi lệnh của CPU",
+      "D": "Cách mã hóa ký tự"
+    }
+  },
+  {
+    "id": 36,
+    "question": "Sự khác biệt giữa little-endian và big-endian là gì?",
+    "options": {
+      "A": "Little-endian lưu byte thấp nhất ở địa chỉ thấp nhất, big-endian lưu byte cao nhất ở địa chỉ thấp nhất",
+      "B": "Little-endian dùng cho số âm, big-endian dùng cho số dương",
+      "C": "Little-endian luôn nhanh hơn big-endian trong mọi trường hợp",
+      "D": "Hai khái niệm hoàn toàn giống nhau"
+    }
+  },
+  {
+    "id": 37,
+    "question": "Giá trị hex 0x12345678 lưu theo little-endian tại các địa chỉ tăng dần sẽ có thứ tự byte là?",
+    "options": {
+      "A": "12 34 56 78",
+      "B": "87 65 43 21",
+      "C": "21 43 65 87",
+      "D": "78 56 34 12"
+    }
+  },
+  {
+    "id": 38,
+    "question": "Trong tổ chức bộ nhớ, một \"word\" (từ nhớ) thường được định nghĩa là?",
+    "options": {
+      "A": "Luôn luôn là 1 byte cố định",
+      "B": "Một khối trên đĩa cứng",
+      "C": "Đơn vị dữ liệu tự nhiên mà CPU xử lý, thường gồm nhiều byte (ví dụ 4 byte = 32 bit)",
+      "D": "Luôn luôn là 1 bit"
+    }
+  },
+  {
+    "id": 39,
+    "question": "Trong số dấu chấm động IEEE 754, giá trị khi mũ toàn bit 1 và phần định trị bằng 0 biểu diễn giá trị gì?",
+    "options": {
+      "A": "Số dương lớn nhất bình thường",
+      "B": "Vô cùng (Infinity)",
+      "C": "Số 0",
+      "D": "NaN (Not a Number)"
+    }
+  },
+  {
+    "id": 40,
+    "question": "Khi thực hiện phép chia số nguyên cho 0 trong phần cứng, hệ quả thường là?",
+    "options": {
+      "A": "Gây ra ngoại lệ/ngắt lỗi phần cứng (exception) vì không xác định được kết quả",
+      "B": "Trả về 0",
+      "C": "Trả về vô cùng như số thực",
+      "D": "Tự động làm tròn kết quả"
+    }
+  },
+  {
+    "id": 41,
+    "question": "Để lưu một số nguyên 32-bit trong bộ nhớ địa chỉ theo byte, cần bao nhiêu byte liên tiếp?",
+    "options": {
+      "A": "8 byte",
+      "B": "2 byte",
+      "C": "1 byte",
+      "D": "4 byte"
+    }
+  },
+  {
+    "id": 42,
+    "question": "Nhận định nào đúng khi so sánh lưu trữ dữ liệu dạng văn bản ASCII và dạng nhị phân thuần trong tệp?",
+    "options": {
+      "A": "Nhị phân không thể dùng để lưu số",
+      "B": "Không có sự khác biệt nào giữa hai cách lưu trữ",
+      "C": "ASCII dễ đọc bởi con người và tương thích rộng nhưng thường chiếm nhiều dung lượng hơn lưu trực tiếp giá trị nhị phân",
+      "D": "ASCII luôn nhanh hơn nhị phân trong mọi trường hợp"
+    }
+  }
+]

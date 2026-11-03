@@ -1,0 +1,432 @@
+[
+  {
+    "id": 43,
+    "question": "Đơn vị nào trong CPU chịu trách nhiệm thực hiện các phép toán số học và logic?",
+    "options": {
+      "A": "Thanh ghi PC",
+      "B": "ALU (Arithmetic Logic Unit)",
+      "C": "CU (Control Unit)",
+      "D": "Bộ nhớ cache"
+    }
+  },
+  {
+    "id": 44,
+    "question": "Thanh ghi PC (Program Counter) có chức năng gì?",
+    "options": {
+      "A": "Lưu địa chỉ của lệnh kế tiếp sẽ được nạp",
+      "B": "Lưu kết quả phép toán gần nhất",
+      "C": "Lưu địa chỉ dữ liệu đang xử lý",
+      "D": "Lưu trạng thái ngắt"
+    }
+  },
+  {
+    "id": 45,
+    "question": "Đơn vị điều khiển (Control Unit) có vai trò gì trong CPU?",
+    "options": {
+      "A": "Lưu trữ dữ liệu tạm thời",
+      "B": "Thực hiện phép cộng trừ",
+      "C": "Giao tiếp trực tiếp với ổ đĩa",
+      "D": "Giải mã lệnh và phát tín hiệu điều khiển các thành phần khác thực hiện lệnh"
+    }
+  },
+  {
+    "id": 46,
+    "question": "\"Đường dữ liệu\" (datapath) trong CPU là gì?",
+    "options": {
+      "A": "Là hệ điều hành",
+      "B": "Là tập lệnh của CPU",
+      "C": "Tập hợp các thành phần phần cứng (ALU, thanh ghi, bus) cùng đường kết nối để xử lý và di chuyển dữ liệu",
+      "D": "Là bộ nhớ chính của máy tính"
+    }
+  },
+  {
+    "id": 47,
+    "question": "Thanh ghi lệnh IR (Instruction Register) dùng để?",
+    "options": {
+      "A": "Lưu trạng thái ngắt",
+      "B": "Lưu lệnh vừa được nạp từ bộ nhớ để giải mã",
+      "C": "Lưu địa chỉ lệnh tiếp theo",
+      "D": "Lưu kết quả cuối cùng"
+    }
+  },
+  {
+    "id": 48,
+    "question": "Trong chu kỳ lệnh, bước nào xảy ra ngay sau bước \"giải mã lệnh\" (decode)?",
+    "options": {
+      "A": "Thực thi lệnh (execute)",
+      "B": "Nạp lệnh (fetch)",
+      "C": "Ghi kết quả trước rồi mới giải mã",
+      "D": "Ngắt CPU"
+    }
+  },
+  {
+    "id": 49,
+    "question": "Kỹ thuật đường ống lệnh (pipeline) giúp cải thiện hiệu năng CPU bằng cách nào?",
+    "options": {
+      "A": "Giảm số lệnh cần thực thi",
+      "B": "Tăng tần số xung nhịp",
+      "C": "Giảm dung lượng bộ nhớ cần thiết",
+      "D": "Cho phép nhiều lệnh được xử lý đồng thời ở các giai đoạn khác nhau, tăng thông lượng (throughput)"
+    }
+  },
+  {
+    "id": 50,
+    "question": "Có mấy loại xung đột (hazard) cơ bản trong pipeline?",
+    "options": {
+      "A": "5 loại",
+      "B": "Chỉ có 1 loại duy nhất",
+      "C": "3 loại: xung đột dữ liệu, xung đột điều khiển, xung đột cấu trúc",
+      "D": "2 loại"
+    }
+  },
+  {
+    "id": 51,
+    "question": "Xung đột dữ liệu (data hazard) trong pipeline xảy ra khi nào?",
+    "options": {
+      "A": "Khi bộ nhớ cache bị đầy",
+      "B": "Khi một lệnh cần dùng kết quả của lệnh trước đó nhưng kết quả đó chưa được tính/ghi xong",
+      "C": "Khi hai lệnh dùng cùng một đơn vị phần cứng",
+      "D": "Khi lệnh rẽ nhánh làm thay đổi luồng thực thi"
+    }
+  },
+  {
+    "id": 52,
+    "question": "Xung đột điều khiển (control hazard) thường xảy ra do đâu?",
+    "options": {
+      "A": "Do lệnh rẽ nhánh (branch) làm thay đổi luồng thực thi khiến các lệnh đã nạp trước đó bị sai",
+      "B": "Do hai lệnh cùng truy cập ALU",
+      "C": "Do thiếu thanh ghi",
+      "D": "Do lỗi bộ nhớ cache"
+    }
+  },
+  {
+    "id": 53,
+    "question": "Kỹ thuật nào thường được dùng để giảm ảnh hưởng của xung đột điều khiển trong pipeline?",
+    "options": {
+      "A": "Tăng số lượng thanh ghi",
+      "B": "Giảm tần số xung nhịp",
+      "C": "Tắt pipeline",
+      "D": "Dự đoán rẽ nhánh (branch prediction)"
+    }
+  },
+  {
+    "id": 54,
+    "question": "So với CPU không dùng pipeline, CPU có pipeline nhưng thường xuyên gặp xung đột sẽ có đặc điểm gì?",
+    "options": {
+      "A": "Không bao giờ có độ trễ",
+      "B": "Luôn đạt hiệu năng lý thuyết tối đa",
+      "C": "Thông lượng tổng thể vẫn cao hơn nhưng có thể phải chèn \"bong bóng\" (stall) làm giảm hiệu quả lý thuyết",
+      "D": "Luôn chậm hơn CPU không pipeline"
+    }
+  },
+  {
+    "id": 55,
+    "question": "Kiến trúc tập lệnh (ISA) định nghĩa điều gì?",
+    "options": {
+      "A": "Dung lượng bộ nhớ cache",
+      "B": "Tập hợp các lệnh, kiểu dữ liệu, thanh ghi và mode địa chỉ mà phần mềm có thể sử dụng để giao tiếp với phần cứng",
+      "C": "Cách bố trí vật lý transistor trên chip",
+      "D": "Tốc độ xung nhịp CPU"
+    }
+  },
+  {
+    "id": 56,
+    "question": "Trong khuôn dạng lệnh (instruction format), trường opcode dùng để?",
+    "options": {
+      "A": "Xác định loại thao tác (phép toán) mà lệnh thực hiện",
+      "B": "Lưu địa chỉ toán hạng",
+      "C": "Lưu dữ liệu tức thời",
+      "D": "Lưu trạng thái cờ"
+    }
+  },
+  {
+    "id": 57,
+    "question": "Toán hạng tức thời (immediate operand) trong lệnh máy là gì?",
+    "options": {
+      "A": "Địa chỉ của một thanh ghi",
+      "B": "Địa chỉ bộ nhớ",
+      "C": "Con trỏ tới ngăn xếp",
+      "D": "Giá trị hằng số được nhúng trực tiếp trong mã lệnh"
+    }
+  },
+  {
+    "id": 58,
+    "question": "Kiểu thao tác \"di chuyển dữ liệu\" (data movement) trong tập lệnh bao gồm hành động nào?",
+    "options": {
+      "A": "So sánh hai giá trị",
+      "B": "Rẽ nhánh chương trình",
+      "C": "Sao chép dữ liệu giữa thanh ghi, bộ nhớ hoặc thiết bị vào/ra",
+      "D": "Thực hiện phép cộng trừ"
+    }
+  },
+  {
+    "id": 59,
+    "question": "Chế độ địa chỉ trong đó toán hạng chính là giá trị nằm ngay trong lệnh gọi là?",
+    "options": {
+      "A": "Địa chỉ thanh ghi (register addressing)",
+      "B": "Địa chỉ tức thời (immediate addressing)",
+      "C": "Địa chỉ trực tiếp (direct addressing)",
+      "D": "Địa chỉ gián tiếp (indirect addressing)"
+    }
+  },
+  {
+    "id": 60,
+    "question": "Chế độ địa chỉ gián tiếp (indirect addressing) hoạt động như thế nào?",
+    "options": {
+      "A": "Địa chỉ trong lệnh trỏ tới một ô nhớ chứa địa chỉ thực sự của toán hạng",
+      "B": "Giá trị toán hạng nằm ngay trong lệnh",
+      "C": "Toán hạng luôn nằm trong thanh ghi",
+      "D": "Không cần truy cập bộ nhớ"
+    }
+  },
+  {
+    "id": 61,
+    "question": "So với địa chỉ trực tiếp, địa chỉ gián tiếp có ưu điểm gì?",
+    "options": {
+      "A": "Luôn nhanh hơn vì ít truy cập bộ nhớ hơn",
+      "B": "Không cần bộ nhớ",
+      "C": "Chỉ dùng được với số nguyên",
+      "D": "Cho phép truy cập vùng nhớ rộng hơn và hỗ trợ cấu trúc dữ liệu động như con trỏ"
+    }
+  },
+  {
+    "id": 62,
+    "question": "Vì sao chế độ địa chỉ chỉ số (indexed addressing) hữu ích khi xử lý mảng (array)?",
+    "options": {
+      "A": "Vì nó luôn nhanh nhất trong mọi trường hợp",
+      "B": "Vì nó không truy cập bộ nhớ",
+      "C": "Vì địa chỉ toán hạng = địa chỉ cơ sở + giá trị thanh ghi chỉ số, thuận tiện để duyệt các phần tử liên tiếp",
+      "D": "Vì nó không cần thanh ghi"
+    }
+  },
+  {
+    "id": 63,
+    "question": "RISC là viết tắt của thuật ngữ nào?",
+    "options": {
+      "A": "Reduced Interrupt System Control",
+      "B": "Reduced Instruction Set Computer",
+      "C": "Rapid Instruction Set Computer",
+      "D": "Register Instruction Set Control"
+    }
+  },
+  {
+    "id": 64,
+    "question": "Đặc điểm chính của kiến trúc RISC là gì?",
+    "options": {
+      "A": "Tập lệnh đơn giản, số lượng lệnh ít, hầu hết lệnh thực thi trong một chu kỳ, khuyến khích dùng thanh ghi",
+      "B": "Tập lệnh phức tạp với nhiều lệnh đa năng",
+      "C": "Nhiều chế độ địa chỉ phức tạp",
+      "D": "Ưu tiên thao tác trực tiếp trên bộ nhớ trong phép toán"
+    }
+  },
+  {
+    "id": 65,
+    "question": "So với RISC, kiến trúc CISC có xu hướng nào?",
+    "options": {
+      "A": "Có tập lệnh đơn giản hơn RISC",
+      "B": "Luôn nhanh hơn RISC trong mọi trường hợp",
+      "C": "Không hỗ trợ truy cập bộ nhớ trực tiếp",
+      "D": "Có tập lệnh phức tạp, đa dạng, một lệnh có thể thực hiện nhiều thao tác và mất nhiều chu kỳ hơn"
+    }
+  },
+  {
+    "id": 66,
+    "question": "Nhận định nào sau đây về việc lựa chọn RISC hay CISC là hợp lý nhất?",
+    "options": {
+      "A": "CISC đã hoàn toàn biến mất khỏi thực tế",
+      "B": "Cả hai kiến trúc hoàn toàn giống nhau về bản chất",
+      "C": "Lựa chọn phụ thuộc vào mục tiêu thiết kế (hiệu năng, tiết kiệm năng lượng, độ phức tạp trình biên dịch), không kiến trúc nào vượt trội tuyệt đối",
+      "D": "RISC luôn tốt hơn CISC trong mọi ứng dụng"
+    }
+  },
+  {
+    "id": 67,
+    "question": "Ngắt (interrupt) là gì?",
+    "options": {
+      "A": "Một loại bộ nhớ cache",
+      "B": "Tín hiệu báo cho CPU tạm dừng chương trình hiện tại để xử lý một sự kiện cần ưu tiên",
+      "C": "Một loại lệnh số học",
+      "D": "Một chế độ địa chỉ"
+    }
+  },
+  {
+    "id": 68,
+    "question": "Khi xảy ra ngắt, CPU cần thực hiện thao tác nào đầu tiên để có thể quay lại chương trình đang chạy?",
+    "options": {
+      "A": "Lưu ngữ cảnh (trạng thái) hiện tại, đặc biệt là giá trị PC và các thanh ghi quan trọng",
+      "B": "Xóa toàn bộ bộ nhớ",
+      "C": "Tắt nguồn CPU",
+      "D": "Xóa nội dung cache"
+    }
+  },
+  {
+    "id": 69,
+    "question": "Phân loại theo nguồn gốc, ngắt có thể chia thành mấy loại chính?",
+    "options": {
+      "A": "Chỉ có 1 loại duy nhất",
+      "B": "Ngắt nhanh và ngắt chậm",
+      "C": "Ngắt lớn và ngắt nhỏ",
+      "D": "Ngắt phần cứng (do thiết bị ngoại vi) và ngắt phần mềm (do lệnh chương trình, ví dụ system call)"
+    }
+  },
+  {
+    "id": 70,
+    "question": "Phân cấp bộ nhớ (memory hierarchy) được sắp xếp theo nguyên tắc nào?",
+    "options": {
+      "A": "Tất cả các cấp có cùng tốc độ",
+      "B": "Chỉ có 2 cấp duy nhất",
+      "C": "Từ nhanh - đắt - dung lượng nhỏ (thanh ghi, cache) đến chậm - rẻ - dung lượng lớn (bộ nhớ ngoài)",
+      "D": "Từ chậm đến nhanh mà không quan tâm chi phí"
+    }
+  },
+  {
+    "id": 71,
+    "question": "Nguyên lý cục bộ về thời gian (temporal locality) nghĩa là gì?",
+    "options": {
+      "A": "Dữ liệu chỉ được truy cập một lần duy nhất",
+      "B": "Dữ liệu/lệnh vừa được truy cập có khả năng cao sẽ được truy cập lại trong thời gian gần",
+      "C": "Dữ liệu ở địa chỉ gần nhau có xu hướng được truy cập gần nhau",
+      "D": "Mọi dữ liệu đều được truy cập với xác suất như nhau"
+    }
+  },
+  {
+    "id": 72,
+    "question": "Nguyên lý cục bộ về không gian (spatial locality) nghĩa là gì?",
+    "options": {
+      "A": "Nếu một địa chỉ nhớ được truy cập thì các địa chỉ lân cận cũng có khả năng cao sẽ được truy cập trong thời gian gần",
+      "B": "Dữ liệu truy cập gần đây sẽ được truy cập lại",
+      "C": "Mọi vị trí bộ nhớ có vai trò như nhau",
+      "D": "Chỉ áp dụng cho ổ đĩa"
+    }
+  },
+  {
+    "id": 73,
+    "question": "So với DRAM, SRAM có đặc điểm gì?",
+    "options": {
+      "A": "Chậm hơn nhưng rẻ hơn DRAM",
+      "B": "Cần làm tươi định kỳ trong khi DRAM thì không",
+      "C": "Có dung lượng lớn hơn DRAM",
+      "D": "Nhanh hơn nhưng đắt hơn và mật độ lưu trữ thấp hơn nên thường dùng làm cache"
+    }
+  },
+  {
+    "id": 74,
+    "question": "ROM (Read-Only Memory) có đặc điểm nào sau đây?",
+    "options": {
+      "A": "Cần làm tươi liên tục",
+      "B": "Có tốc độ nhanh hơn thanh ghi CPU",
+      "C": "Dữ liệu không bị mất khi mất điện, chủ yếu dùng để đọc",
+      "D": "Mất dữ liệu khi mất điện"
+    }
+  },
+  {
+    "id": 75,
+    "question": "DRAM cần phải làm tươi (refresh) định kỳ vì lý do gì?",
+    "options": {
+      "A": "Vì DRAM không có địa chỉ",
+      "B": "Vì dữ liệu được lưu dưới dạng điện tích trên tụ điện, dễ bị rò rỉ theo thời gian",
+      "C": "Vì DRAM sử dụng flip-flop dễ nhiễu",
+      "D": "Vì DRAM không có nguồn điện"
+    }
+  },
+  {
+    "id": 76,
+    "question": "Bộ nhớ cache có vai trò gì trong hệ thống máy tính?",
+    "options": {
+      "A": "Lưu tạm dữ liệu/lệnh được truy cập gần đây để giảm thời gian truy cập trung bình, tận dụng tính cục bộ",
+      "B": "Thay thế hoàn toàn bộ nhớ chính",
+      "C": "Chỉ dùng cho lưu trữ lâu dài",
+      "D": "Không liên quan đến hiệu năng hệ thống"
+    }
+  },
+  {
+    "id": 77,
+    "question": "Các kiểu ánh xạ cache phổ biến gồm?",
+    "options": {
+      "A": "Chỉ có ánh xạ trực tiếp",
+      "B": "Chỉ có ánh xạ liên kết",
+      "C": "Ánh xạ tuần tự và ánh xạ song song",
+      "D": "Ánh xạ trực tiếp, ánh xạ liên kết đầy đủ, ánh xạ liên kết tập hợp"
+    }
+  },
+  {
+    "id": 78,
+    "question": "Trong ánh xạ trực tiếp (direct-mapped cache), mỗi khối bộ nhớ chính có thể ánh xạ tới bao nhiêu dòng cache?",
+    "options": {
+      "A": "Một tập hợp gồm nhiều dòng",
+      "B": "Không dòng nào cả",
+      "C": "Chỉ đúng 1 dòng cache cố định",
+      "D": "Bất kỳ dòng nào trong cache"
+    }
+  },
+  {
+    "id": 79,
+    "question": "So với ánh xạ trực tiếp, ánh xạ liên kết đầy đủ (fully associative) có ưu và nhược điểm gì?",
+    "options": {
+      "A": "Không cần mạch so sánh địa chỉ",
+      "B": "Linh hoạt hơn, giảm xung đột nhưng phần cứng so sánh phức tạp và tốn kém hơn",
+      "C": "Đơn giản hơn và rẻ hơn ánh xạ trực tiếp",
+      "D": "Luôn nhanh hơn tuyệt đối trong mọi trường hợp"
+    }
+  },
+  {
+    "id": 80,
+    "question": "Chính sách thay thế LRU (Least Recently Used) trong cache có nguyên tắc là?",
+    "options": {
+      "A": "Loại bỏ khối dữ liệu lâu nhất không được truy cập",
+      "B": "Loại bỏ khối được nạp vào đầu tiên theo thứ tự FIFO",
+      "C": "Loại bỏ khối ngẫu nhiên",
+      "D": "Loại bỏ khối được truy cập gần đây nhất"
+    }
+  },
+  {
+    "id": 81,
+    "question": "Chính sách ghi \"write-through\" trong cache hoạt động như thế nào?",
+    "options": {
+      "A": "Dữ liệu chỉ được ghi xuống bộ nhớ chính khi khối cache bị thay thế",
+      "B": "Không bao giờ ghi xuống bộ nhớ chính",
+      "C": "Chỉ ghi khi CPU yêu cầu đọc",
+      "D": "Mỗi khi ghi vào cache, dữ liệu đồng thời được ghi luôn xuống bộ nhớ chính"
+    }
+  },
+  {
+    "id": 82,
+    "question": "So với write-through, chính sách \"write-back\" có ưu điểm gì?",
+    "options": {
+      "A": "Đơn giản hơn về phần cứng",
+      "B": "Không cần bit \"dirty\"",
+      "C": "Giảm số lần truy cập bộ nhớ chính vì chỉ ghi xuống khi khối bị thay thế, giúp tăng hiệu năng",
+      "D": "Luôn đảm bảo dữ liệu bộ nhớ chính cập nhật tức thời"
+    }
+  },
+  {
+    "id": 83,
+    "question": "Nếu tỷ lệ trúng cache (hit rate) là 90%, thời gian truy cập cache là 1ns, miss penalty là 100ns, thời gian truy cập trung bình (AMAT) xấp xỉ bao nhiêu?",
+    "options": {
+      "A": "91ns",
+      "B": "11ns",
+      "C": "1ns",
+      "D": "100ns"
+    }
+  },
+  {
+    "id": 84,
+    "question": "Nếu tăng kích thước cache, điều gì thường xảy ra với tỷ lệ trúng và chi phí?",
+    "options": {
+      "A": "Tỷ lệ trúng thường tăng nhưng chi phí phần cứng (và có thể cả thời gian truy cập) cũng tăng theo",
+      "B": "Tỷ lệ trúng luôn giảm",
+      "C": "Chi phí luôn giảm",
+      "D": "Không có ảnh hưởng nào"
+    }
+  },
+  {
+    "id": 85,
+    "question": "Nhận định nào đúng khi thiết kế hệ thống cache nhiều cấp (L1, L2, L3)?",
+    "options": {
+      "A": "Tất cả các cấp cache có cùng kích thước và tốc độ",
+      "B": "L1 luôn lớn hơn L3",
+      "C": "Chỉ cần một cấp cache là đủ tối ưu cho mọi hệ thống",
+      "D": "L1 thường nhỏ và nhanh nhất, các cấp sau lớn hơn nhưng chậm hơn, nhằm cân bằng giữa tốc độ và chi phí"
+    }
+  }
+]
